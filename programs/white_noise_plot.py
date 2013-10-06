@@ -5,10 +5,15 @@ Authors: John Stachurski, Thomas J. Sargent
 LastModified: 11/08/2013
 
 """
-
-from pylab import plot, show, legend
-from random import normalvariate
-x = [normalvariate(0, 1) for i in range(100)]
-plot(x, 'b-', label="white noise")
-legend()
-show()
+import scipy, matplotlib, pandas, pylab as pyl, numpy as np
+x = np.linspace(0, 20, 1000)
+y = np.sin (x)
+pyl.plot(x, y)
+pyl.title('plot')
+pyl.xlim(5, 15)
+pyl.ylim(-1.2, 1.2)
+pyl.plot(x, y)
+pyl.xlabel('This is X')
+pyl.ylabel('This is Y')
+pyl.legend()
+pyl.show()
